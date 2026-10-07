@@ -1,0 +1,279 @@
+
+/*** ROOT 
+ *** Tutoriel pour utiliser les variables
+ *** https://blankthemerpg.forumactif.com/t139-utiliser-les-variables-css ***/
+
+/* VARIABLE DU MODE DE BASE (ici clair) */
+:root {
+  color-scheme: light;
+  --header: url('https://images2.imgbox.com/73/09/ensESMz1_o.png');
+  --fond: linear-gradient(40.15deg, #d3b37773, 10.15%, #8e6381a6 55%, #a5865d59 90%), url(https://images2.imgbox.com/b4/73/ZCN80oBO_o.png);
+  
+  --neutral: #fafbfc;
+  --neutralDark: #f1f1f1;
+  --neutralDarker: #ffffff;
+  
+  --transparent-one: #fafbfc30;
+  --transparent-two: #fafbfc40;
+  --transparent-three: #ffffff40;
+  --transparent-four: #ffffff70;
+ 
+  --gradient-one: linear-gradient(40.15deg, var(--one), 10.15%, var(--two), 55%, var(--three) 90%);
+  --gradient-two: linear-gradient(0.07turn, var(--one), var(--two));
+  --gradient-three: linear-gradient(0.07turn, var(--two), var(--three));  
+  
+  --contrast: #b8819d;
+  --contrastLight: #d8a673;
+  --contrastLighter: #8e7786;
+
+  --accentClr: #d8a673;
+  --accentClrDark: #b8819d;
+  
+    --one: #d8a673;
+    --two: #b8819d;
+    --three: #8e7786;
+
+  --white:#fff;
+  --black:#000;
+  --stay-white:#fff;
+  
+    --wf: #455C3D;
+    --dc: #903528;
+    --sd: #7D5E3A;
+    --cs: #597E85;
+    --grad-wf: linear-gradient(90deg, #b0c5a1, #a1be9799);
+    --grad-dc: linear-gradient(90deg, #903528, #903528c2);
+    --grad-sd: linear-gradient(90deg, #7D5E3A, #7d5e3ac9);
+    --grad-cs: linear-gradient(90deg, #597E85, #597e85c2);
+  
+  --textColor: #454545;
+  --textColorAccent: #000;
+
+  --border: 1px solid #e5e5e5;
+
+  --shadowBox: 0 0 20px #23265730;
+
+  --mini-size: 10px;
+  --little-size: 12px;
+  --normal-size: 15px;
+  --medium-size: 16px;
+  --large-size: 18px;
+  --title-size: 22px;
+  --maxi-size: 32px;
+
+  --font: "Work Sans", sans-serif;
+  --font-title: "Gloock", serif;
+  
+  --radius-mini: 3px;
+  --radius-normal: 5px; 
+  --radius-medium: 10px;
+  --radius-large: 15px;
+  
+  --awesome:'Font Awesome 5 Free';
+  
+  --transi: all 0.6s ease;
+}
+
+/* VARIABLES DU MODE INVERSE (ici sombre) */
+[data-color-scheme="dark"] {
+  color-scheme: dark;
+  --header: url('https://images2.imgbox.com/73/09/ensESMz1_o.png');
+  --fond: linear-gradient(40.15deg, #7a684473, 10.15%, #552d49a6 55%, #7d490459 90%), url(https://images2.imgbox.com/b4/73/ZCN80oBO_o.png);
+
+    --neutral: #202020;
+    --neutralDark: #181818;
+    --neutralDarker: #141414;
+  
+  --transparent-one: #202020b3;
+  --transparent-two: #222222c9;
+  --transparent-three: #00000057;
+  --transparent-four: #212121d6;
+
+    --one: #a97156;
+    --two: #825568;
+    --three: #785978;
+  
+    --grey: #3b3b3b;
+    --white: #000;
+    --black: #fff;
+    --stay-white:#ffffff;
+    --greytwo: #161616;
+    --greythree: #1f1f1f;
+  
+  --contrast: #a1798d;
+  --contrastLight: #b67d55;
+  --contrastLighter: #40485e;
+
+  --accentClr: #b67d55;
+  --accentClrDark: #a1798d;
+
+  --textColor: #c7c5cd;
+  --textColorAccent: #e5e5f0;
+
+  --border: 1px solid #2b2e3b;
+
+  --shadowBox: 0 0 20px var(--neutralDark);
+}
+
+/*------ ANCIENNES BALISES D'HELLSKA -----*/
+
+tw {
+  filter: blur(3px);
+  transition:var(--transi);}
+tw:hover {filter: blur(0);}
+
+ua {
+  text-transform:uppercase;
+  font-weight:800;
+  letter-spacing:2;
+  color: var(--two);}
+
+ti, ti1 {
+  color:var(--textColor);
+  margin-left:15px;
+  text-transform:uppercase;
+  font-weight:800;
+  font-family:var(--font4);
+  font-size:var(--title-size);}
+ti l, ti1 l {color:var(--accent);}
+
+in, yn {
+  font-family:var(--font4);
+  font-weight:800;
+  text-transform:uppercase;
+  background:var(--degtext);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;}
+in:after {
+  content:' \ef0e';
+  font-family:var(--tabler);
+  font-size:18px;
+  margin-left:3px;
+  font-weight:400;}
+
+an {
+  font-weight:bold;
+  text-transform:uppercase;
+background: var(--gradient-one);
+  color:var(--neutral);
+  font-weight:500;
+  padding:2px 10px;
+  border-radius: var(--radius-normal);
+  text-transform:uppercase;
+  letter-spacing:1px;
+ font-size: var(--mini-size);}
+
+.texte {
+  margin-top:5px;
+  text-align:justify;}
+
+ii {
+  font-style:italic;
+  color: var(--three);}
+
+bb {
+  font-weight:800;
+  text-transform:uppercase;
+  color:var(--one);}
+
+uu {
+  font-weight:500;
+  padding:0px 5px 0px 5px;
+  box-shadow:inset 0 -4px 0 var(--two);}
+
+st, stt {
+  background:linear-gradient(to right, var(--accent-light) 0%, var(--accent-dark) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-family:var(--font-title);
+  font-weight:900;}
+
+/*** LGBTQIA+ DLC ***/
+pride {
+  background:linear-gradient(0.25turn, #E40303, #FF8C00, #FFED00, #008026, #24408E, #732982);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;}
+
+lesbian {
+  background:linear-gradient(0.25turn, #D52D00, #EF7627, #FF9A56, #FFFFFF, #D162A4, #B55690, #A30262);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;}
+
+gay {
+  background:linear-gradient(0.25turn, #078D70, #26CEAA, #98E8C1, #FFFFFF, #7BADE2, #5049CC, #3D1A78);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;}
+
+trans {
+  background:linear-gradient(0.25turn, #5BCEFA, #F5A9B8, #FFFFFF);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;}
+
+bisexual {
+  background:linear-gradient(0.25turn, #D60270, #9B4F96, #0038A8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;}
+
+pan {
+  background:linear-gradient(0.25turn, #FF218C, #FFD800, #21B1FF);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;}
+
+asexual {
+  background:linear-gradient(0.25turn, #000000, #A3A3A3, #FFFFFF, #800080);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;}
+
+nonbinary {
+  background:linear-gradient(0.25turn, #FCF434, #FFFFFF, #9C59D1, #2C2C2C);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;}
+
+
+
+/* MINI MOODBOARD */
+.mood {
+  display:grid;
+  grid-template-columns:102px 102px 102px;
+  grid-template-rows:102px 102px 102px;
+  grid-gap:7px;
+  justify-content:center;
+  align-content:center;
+  margin-bottom:-5em;}
+
+.pix11 {
+  grid-column:1/2;
+  grid-row:1/2;
+  border:var(--border);}
+.pix12 {
+  grid-column:2/3;
+  grid-row:1/2;
+  border:var(--border);}
+.pix13 {
+  grid-column:3/4;
+  grid-row:1/2;
+  border:var(--border);}
+.pix21 {
+  grid-column:1/2;
+  grid-row:2/3;
+  border:var(--border);}
+.pix22 {
+  grid-column:2/3;
+  grid-row:2/3;
+  border:var(--border);}
+.pix23 {
+  grid-column:3/4;
+  grid-row:2/3;
+  border:var(--border);}
+.pix31 {
+  grid-column:1/2;
+  grid-row:3/4;
+  border:var(--border);}
+.pix32 {
+  grid-column:2/3;
+  grid-row:3/4;
+  border:var(--border);}
+.pix33 {
+  grid-column:3/4;
+  grid-row:3/4;
+  border:var(--border);}
